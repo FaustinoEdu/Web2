@@ -1,9 +1,38 @@
 //document.getElementById("demo").style.color = "red";
+var novosTd=4;
 
-var criandoColuna = document.createElement("th");
-var criandoLinha= document.createElement("td");
 
-const collection = document.getElementsByClassName("");// Buscando por classe
+
+const vetorDeTds= document.getElementsByTagName("td");
+const vetorDeths= document.getElementsByTagName("th");
+
+for(const i=0 ; i<vetorDeTds; i++ ){
+
+  if(i=4){ //Criando coluna
+
+    const novaColuna= document.createElement("th");
+    vetorDeTds[i].innerHTML= "<th> Classificações <th>"
+  }
+ 
+ if(i=novosTd){
+ 
+  const novaLinha= document.createElement("td");
+
+ }
+
+
+
+novosTd= novosTd+4;
+}
+
+
+
+
+
+
+
+
+
 
 //var content = element.innerHTML; permite modificar elementos de um html
 
