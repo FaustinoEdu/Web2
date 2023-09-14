@@ -1,28 +1,38 @@
 //document.getElementById("demo").style.color = "red";
 var novosTd=4;
 
+var valorAltura;
+var valorPeso;
 
+const classificacoesText = document.createTextNode("Classificações");
+
+const novaColuna= document.createElement("th");
+const novaLinha= document.createElement("td");
 
 const vetorDeTds= document.getElementsByTagName("td");
 const vetorDeths= document.getElementsByTagName("th");
 
+novaColuna.appendChild(classificacoesText);
+
 for(const i=0 ; i<vetorDeTds; i++ ){
 
-  if(i=4){ //Criando coluna
-
-    const novaColuna= document.createElement("th");
-    vetorDeTds[i].innerHTML= "<th> Classificações <th>"
+  if(i=4){ 
+    //Criando coluna
+    
+   
+    
   }
  
  if(i=novosTd){
  
   const novaLinha= document.createElement("td");
 
+  vetorDeThs[i].innerHTML= "<th>  <th>"
  }
 
 
 
-novosTd= novosTd+4;
+novosTd= novosTd+5;
 }
 
 
