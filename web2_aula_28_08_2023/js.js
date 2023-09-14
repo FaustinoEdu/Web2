@@ -1,53 +1,19 @@
-//document.getElementById("demo").style.color = "red";
-var novosTd=4;
+var novosTds = 4;
+var classificacao;
 
-var valorAltura;
-var valorPeso;
+var minhaTabela = document.querySelector("table");//Selecioana elementos 
 
-const classificacoesText = document.createTextNode("Classificações");
+// Adicione a nova coluna de cabeçalho
+var novaColunaCabecalho = document.createElement("th"); // Criando novo cabeçalho da coluna
+novaColunaCabecalho.textContent = "Classificações"; // Informações do cabeçalho
+minhaTabela.querySelector("thead tr").appendChild(novaColunaCabecalho);//  selecionando tr de table, appendchilld pega o ultimo 
 
-const novaColuna= document.createElement("th");
-const novaLinha= document.createElement("td");
+// Adicione novas colunas de dados à tabela
+var linhas = minhaTabela.querySelectorAll("tbody tr");  // Consultando o corpo da tabela
+linhas.forEach(function (linha) {//forEach passa uma função de callback
 
-const vetorDeTds= document.getElementsByTagName("td");
-const vetorDeths= document.getElementsByTagName("th");
+  var novaColunaDados = document.createElement("td");
+  //novaColunaDados.textContent = ;
+  linha.appendChild(novaColunaDados);
 
-novaColuna.appendChild(classificacoesText);
-
-for(const i=0 ; i<vetorDeTds; i++ ){
-
-  if(i=4){ 
-    //Criando coluna
-    
-   
-    
-  }
- 
- if(i=novosTd){
- 
-  const novaLinha= document.createElement("td");
-
-  vetorDeThs[i].innerHTML= "<th>  <th>"
- }
-
-
-
-novosTd= novosTd+5;
-}
-
-
-
-
-
-
-
-
-
-
-//var content = element.innerHTML; permite modificar elementos de um html
-
-//const buscandoImclinha= document.getElementsByTagName("td").getElementById("imc");
-//const box = document.querySelector("#imc"); busca pelo id, pesquisar sobre o query
-
-/*const box = document.getElementById("box");
-box.innerHTML = "<p>Box</p>";*/
+});
