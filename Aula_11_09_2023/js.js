@@ -11,7 +11,15 @@ async function postagem(){
      postagem.innerHTML=postagem.innerHTML+postsHTML;
     
     }
- }
 }
+    else{
+console.error;
+alert('Algo está errado');
+postagem.innerHTML='Servidor parou'
+
+    }
+
+ }
+
 
 postagem()
